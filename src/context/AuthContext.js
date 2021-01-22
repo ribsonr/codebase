@@ -26,7 +26,6 @@ export const AuthContextProvider = ({children}) => {
   */
   const loginUser = (access_token) => {
     Storage.setUserAccessToken(access_token);
-    // Storage.setOwnerId(id);
     setVal({
       ...initialAuthState,
       access_token,

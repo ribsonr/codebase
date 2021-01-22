@@ -1,15 +1,27 @@
+/**
+ * Olly Owners App
+ * created by: Basil Arackal
+ * created on: Nov 5, 2020
+ *
+ * @format
+ * @flow strict-local
+ */
+
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import HomeScreen from './screens/HomeScreen';
+import {StatusBar} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import RootSwitchNavigator from './routes/RootSwitchNavigator';
+import {AuthContextProvider} from './context/AuthContext';
 
 const App = () => {
   return (
-    <View>
-      <HomeScreen />
-    </View>
+    <AuthContextProvider>
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+      <NavigationContainer>
+        <RootSwitchNavigator />
+      </NavigationContainer>
+    </AuthContextProvider>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;

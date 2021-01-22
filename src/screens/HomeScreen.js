@@ -1,16 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
+import {Colors, Typography} from '../styles';
 
-const App = () => {
+const HomeScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Welcome to Riafy</Text>
+      <Text style={styles.headingTitle}>Welcome to react native</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  container: {},
+  headingTitle: {fontSize: 20},
 });
 
-export default App;
+export default HomeScreen;
